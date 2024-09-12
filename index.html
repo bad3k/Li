@@ -25,169 +25,374 @@
       <p>In this conversational Text-to-speech(CTTS) task, the heterogeneous graph has excellent emotional rendering effects for conversation speech synthesis. However, in the construction process of heterogeneous graphs, the impact of fine-grained contextual historical information on emotional communication during dialogue has not been considered, which has always been a challenge. To address this issue, this article proposes the Fine grained text feature enhanced emotion aware Conversational Text to Speech (FECTTS). Specifically, we utilized fine-grained word level text features and other modalities to jointly construct heterogeneous graphs. In order to obtain more accurate and delicate emotional features, we employed a simple and effective emotion predictor. The experimental results show that the method proposed in this article has excellent conversational speech synthesis quality, and contains rich emotional expressions in the synthesized current discourse that match the emotional expressions in the context.</p>
       
 
-      <h2 id="speech-based-emotion-control">Emotion Control Based On Speech Prompt</h2>
-      <h4 id="note">( Note that: in the 'Ours w/o MPEE', we replaced the proposed MPEE  with the AMPE of MM-TTS ) </h4>
-      <table>
-        <thead>
-          <tr>
-            <th><center> Speech Prompt </center></th>
-            <th><center> Text </center></th>
-            <th><center> GenerSpeech </center></th>
-            <th><center> Meta-StyleSpeech </center></th>
-            <th><center> MM-TTS </center></th>
-            <th><center> Ours w/o MPEE </center></th>
-            <th><center> Ours w/o ECL </center></th>
-            <th><center> Ours </center></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><audio src="samples/speech-based/0/Ref.wav" controls="" preload=""></audio></td>
-            <td>don't ask me to carry an oily rag like that.</td>
-            <td><audio src="samples/speech-based/0/Meta.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/0/Gener.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/0/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/0/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/0/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/0/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-          <tr>
-            <td><audio src="samples/speech-based/1/Ref.wav" controls="" preload=""></audio></td>
-            <td>she had your dark suit in greasy wash water all year.</td>
-            <td><audio src="samples/speech-based/1/Meta.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/1/Gener.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/1/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/1/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/1/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/1/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-          <tr>
-            <td><audio src="samples/speech-based/2/Ref.wav" controls="" preload=""></audio></td>
-            <td>he ate four extra eggs for breakfast.</td>
-            <td><audio src="samples/speech-based/2/Meta.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/2/Gener.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/2/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/2/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/2/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/2/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-          <tr>
-            <td><audio src="samples/speech-based/3/Ref.wav" controls="" preload=""></audio></td>
-            <td>he ate four extra eggs for breakfast.</td>
-            <td><audio src="samples/speech-based/3/Meta.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/3/Gener.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/3/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/3/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/3/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/3/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2 id="image-based-emotion-control">Emotion Control Based On Image Prompt</h2>
-
-      <table>
-        <thead>
-          <tr>
-            <th><center> Image Prompt </center></th>
-            <th><center> Text </center></th>
-            <th><center> MM-TTS </center></th>
-            <th><center> Ours w/o MPEE </center></th>
-            <th><center> Ours w/o ECL </center></th>
-            <th><center> Ours </center></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><img src="samples/image-based/0/M003_angry.jpg" alt="" /></td>
-            <td>In many of his poems death comes by train a strongly evocative visual image.</td>
-            <td><audio src="samples/image-based/0/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/image-based/0/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/image-based/0/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/image-based/0/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-          <tr>
-            <td><img src="samples/image-based/1/M007_angry.jpg" alt="" /></td>
-            <td>In many of his poems death comes by train a strongly evocative visual image.</td>
-            <td><audio src="samples/image-based/1/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/image-based/1/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/image-based/1/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/image-based/1/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-          <tr>
-            <td><img src="samples/image-based/2/0.jpg" alt="" /></td>
-            <td>In many of his poems death comes by train a strongly evocative visual image.</td>
-            <td><audio src="samples/image-based/2/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/image-based/2/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/image-based/2/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/image-based/2/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-          <tr>
-            <td><img src="samples/image-based/3/W016_fear.jpg" alt="" /></td>
-            <td>In many of his poems death comes by train a strongly evocative visual image.</td>
-            <td><audio src="samples/image-based/3/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/image-based/3/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/image-based/3/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/image-based/3/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-
-        </tbody>
-      </table>
-
-      <h2 id="text-based-emotion-control">Emotion Control Based On Text Prompt</h2>
-
-      <table>
-        <thead>
-          <tr>
-            <th><center> Text Prompt </center></th>
-            <th><center> Text </center></th>
-            <th><center> MM-TTS </center></th>
-            <th><center> Ours w/o MPEE </center></th>
-            <th><center> Ours w/o ECL </center></th>
-            <th><center> Ours </center></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>A man talks in a tone of happiness.</td>
-            <td>Its yellow bristles, rather a mane than a head of hair, covered and concealed a lofty brow, evidently made to contain thought.</td>
-            <td><audio src="samples/text-based/0/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/0/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/0/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/0/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-          <tr>
-            <td>A man voices with a pitch of intense gloom.</td>
-            <td>When he looked over his shoulder she was lacing her boots</td>
-            <td><audio src="samples/text-based/1/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/1/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/1/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/1/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-          <tr>
-            <td>A man speaks with a tone of extreme anger..wav</td>
-            <td>I, whom the Kshatriyas know as Kerim Shah, a prince from Iranistan, am no greater a masquerader than most men.</td>
-            <td><audio src="samples/text-based/2/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/2/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/2/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/2/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-          <tr>
-            <td>There’s an intense terror in the man’s tone.</td>
-            <td>“Why don’t you move the pony?</td>
-            <td><audio src="samples/text-based/3/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/3/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/3/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/text-based/3/Ours.wav" controls="" preload=""></audio></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <footer class="site-footer">
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
-      </footer>
-
-    </section>
-
-  </body>
+      <div class="section-content ">
+						<div class="subsection-title">Synthesized samples</div>
+						
+						<div class="subsection-exp-1">
+							<!-- 1 -->
+							<div class="module-title"><strong>Note:</strong>&nbsp;&nbsp;(*; *) denotes the (emotion; intensity) of the utterance.</div>
+							<div class="module-title">1</div>
+							<div class="module-content">
+								<table class="table-sample">
+								  <thead>
+									<tr>
+										<th colspan="4" style="text-align: center"><strong>Dialogue History</strong></th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+										<td style="text-align: center" colspan="4">
+											<span>1. What are you reading? you've had your nose buried in that book since last night.&nbsp;&nbsp;(neutral;&nbsp;weak)</neutral;&nbsp;weak></span>
+											</br>
+											<span>2. This book is so good. i just can't put it down! it's called 'the power of one'.&nbsp;&nbsp;(happy;&nbsp;medium)</span>
+											</br>
+											<span>3. I haven't read a book like that for as long as i can remember.&nbsp;&nbsp;(happy;&nbsp;weak)</span>
+											</br>
+											<audio src="./audio/1-happiness/d59-all.wav" class="dialogue-wav" controls="" preload=""></audio>
+										</td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
+							<div class="module-content">
+								<table class="table-sample">
+								  <thead>
+								    <tr>
+										<th colspan="4" style="text-align: center"><strong>Current Utterance</strong></th>
+								    </tr>
+								  </thead>
+								  <tbody>
+									<tr>
+										<td style="text-align: center">No emotional context modeling</td>
+										<td style="text-align: center">GRU-based context modeling</td>
+										<td style="text-align: center">Homogeneous Graph-based emotion context modeling</td>
+										<td style="text-align: center"><strong>ECSS(Proposed)</strong></td>
+									</tr>
+								    <tr>
+										<td colspan="4" style="text-align: center"><span>4. Me either. from the very first page, this author just pulled me right in!&nbsp;&nbsp;(happy;&nbsp;weak)</span></td>
+								    </tr>
+									<tr>
+										<td style="text-align: left"><audio src="./audio/1-happiness/f2_3_1_d59.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/1-happiness/guo_3_1_d59.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/1-happiness/gcn_3_1_d59.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/1-happiness/ours_3_1_d59.wav" controls="" preload=""></audio></td>
+								    </tr>
+									<tr>
+										<td style="text-align: left"><img src="./audio/1-happiness/2.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/1-happiness/3.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/1-happiness/4.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/1-happiness/5.png" style="width: 100%;"/></td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
+							
+							
+							<!-- 2 -->
+							<div class="module-title">2</div>
+							<div class="module-content">
+								<table class="table-sample">
+								  <thead>
+									<tr>
+										<th colspan="4" style="text-align: center"><strong>Dialogue History</strong></th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+										<td style="text-align: center" colspan="4">
+											<span>1. I am looking for a pan.&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<span>2. No problem. what size would you like?&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<audio src="./audio/0-none/d23-all.wav" class="dialogue-wav" controls="" preload=""></audio>
+										</td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
+							<div class="module-content">
+								<table class="table-sample">
+								  <thead>
+								    <tr>
+										<th colspan="4" style="text-align: center"><strong>Current Utterance</strong></th>
+								    </tr>
+								  </thead>
+								  <tbody>
+									<tr>
+										<td style="text-align: center">No emotional context modeling</td>
+										<td style="text-align: center">GRU-based context modeling</td>
+										<td style="text-align: center">Homogeneous Graph-based emotion context modeling</td>
+										<td style="text-align: center"><strong>ECSS(Proposed)</strong></td>
+									</tr>
+								    <tr>
+										<td colspan="4" style="text-align: center"><span>3. A big one would be nice.&nbsp;&nbsp;(neutral;&nbsp;weak)</span></td>
+								    </tr>
+									<tr>
+										<td style="text-align: left"><audio src="./audio/0-none/f2_2_1_d23.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/0-none/guo_2_1_d23.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/0-none/gcn_2_1_d23.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/0-none/ours_2_1_d23.wav" controls="" preload=""></audio></td>
+								    </tr>
+									<tr>
+										<td style="text-align: left"><img src="./audio/0-none/2.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/0-none/3.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/0-none/4.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/0-none/5.png" style="width: 100%;"/></td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
+							
+							
+							<!-- 3 -->
+							<div class="module-title">3</div>
+							<div class="module-content">
+								<table class="table-sample">
+								  <thead>
+									<tr>
+										<th colspan="4" style="text-align: center"><strong>Dialogue History</strong></th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+										<td style="text-align: center" colspan="4">
+											<span>1. Mary, can you tell me how you keep in shape?&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<span>2. You'll never be in shape until you eat less and take more exercise.&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<span>3. Now, tell me what you often eat.&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<span>4. I often eat fish and eggs.&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<span>5. Do you eat a lot of vegetables?&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<span>6. Oh yes, and fruits. i love fruits very much.&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<span>7. What do you like to drink?&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<span>8. Well, i never drink alcohol, coffee or tea.&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<span>9. Umm whatever would you like to drink?&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<span>10. I drink a lot of milk. i drink milk almost every day.&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<span>11. How often do you exercise?&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<span>12. Well, i walk every day.&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<span>13. It's a good diet and a regular exercise.&nbsp;&nbsp;(happy;&nbsp;weak)</span>
+											</br>
+											<audio src="./audio/3-happy/d64-all.wav" class="dialogue-wav" controls="" preload=""></audio>
+										</td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
+							<div class="module-content">
+								<table class="table-sample">
+								  <thead>
+								    <tr>
+										<th colspan="4" style="text-align: center"><strong>Current Utterance</strong></th>
+								    </tr>
+								  </thead>
+								  <tbody>
+									<tr>
+										<td style="text-align: center">No emotional context modeling</td>
+										<td style="text-align: center">GRU-based context modeling</td>
+										<td style="text-align: center">Homogeneous Graph-based emotion context modeling</td>
+										<td style="text-align: center"><strong>ECSS(Proposed)</strong></td>
+									</tr>
+								    <tr>
+										<td colspan="4" style="text-align: center"><span>14. Yes, quite right.&nbsp;&nbsp;(happy;&nbsp;weak)</span></td>
+								    </tr>
+									<tr>
+										<td style="text-align: left"><audio src="./audio/3-happy/f2_13_1_d64.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/3-happy/guo_13_1_d64.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/3-happy/gcn_13_1_d64.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/3-happy/ours_13_1_d64.wav" controls="" preload=""></audio></td>
+								    </tr>
+									<tr>
+										<td style="text-align: left"><img src="./audio/3-happy/2.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/3-happy/3.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/3-happy/4.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/3-happy/5.png" style="width: 100%;"/></td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
+							
+							<!-- 4 -->
+							<div class="module-title">4</div>
+							<div class="module-content">
+								<table class="table-sample">
+								  <thead>
+									<tr>
+										<th colspan="4" style="text-align: center"><strong>Dialogue History</strong></th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+										<td style="text-align: center" colspan="4">
+											<span>1.This bloody computer!&nbsp;&nbsp;(anger;&nbsp;medium)</span>
+											</br>
+											<span>2.Umm what seems to be the problem?&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<audio src="./audio/5-anger/d487-all.wav" class="dialogue-wav" controls="" preload=""></audio>
+										</td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
+							<div class="module-content">
+								<table class="table-sample">
+								  <thead>
+								    <tr>
+										<th colspan="4" style="text-align: center"><strong>Current Utterance</strong></th>
+								    </tr>
+								  </thead>
+								  <tbody>
+									<tr>
+										<td style="text-align: center">No emotional context modeling</td>
+										<td style="text-align: center">GRU-based context modeling</td>
+										<td style="text-align: center">Homogeneous Graph-based emotion context modeling</td>
+										<td style="text-align: center"><strong>ECSS(Proposed)</strong></td>
+									</tr>
+								    <tr>
+										<td colspan="4" style="text-align: center"><span>3. My computer just crashed again for the third time today!&nbsp;&nbsp;(anger;&nbsp;medium)</span></td>
+								    </tr>
+									<tr>
+										<td style="text-align: left"><audio src="./audio/5-anger/f2_2_1_d487.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/5-anger/guo_2_1_d487.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/5-anger/gcn_2_1_d487.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/5-anger/ours_2_1_d487.wav" controls="" preload=""></audio></td>
+								    </tr>
+									<tr>
+										<td style="text-align: left"><img src="./audio/5-anger/2.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/5-anger/3.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/5-anger/4.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/5-anger/5.png" style="width: 100%;"/></td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
+							
+							<!-- 5 -->
+							<div class="module-title">5</div>
+							<div class="module-content">
+								<table class="table-sample">
+								  <thead>
+									<tr>
+										<th colspan="4" style="text-align: center"><strong>Dialogue History</strong></th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+										<td style="text-align: center" colspan="4">
+											<span>1.Hi, dear, i've got your voice at last.&nbsp;&nbsp;(happy;&nbsp;weak)</span>
+											</br>
+											<audio src="./audio/4-happy/0_1_d111.wav" class="dialogue-wav" controls="" preload=""></audio>
+										</td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
+							<div class="module-content">
+								<table class="table-sample">
+								  <thead>
+								    <tr>
+										<th colspan="4" style="text-align: center"><strong>Current Utterance</strong></th>
+								    </tr>
+								  </thead>
+								  <tbody>
+									<tr>
+										<td style="text-align: center">No emotional context modeling</td>
+										<td style="text-align: center">GRU-based context modeling</td>
+										<td style="text-align: center">Homogeneous Graph-based emotion context modeling</td>
+										<td style="text-align: center"><strong>ECSS(Proposed)</strong></td>
+									</tr>
+								    <tr>
+										<td colspan="4" style="text-align: center"><span>2. Hi, darling, i am thinking it is the time of your calling.&nbsp;&nbsp;(happy;&nbsp;medium)</span></td>
+								    </tr>
+									<tr>
+										<td style="text-align: left"><audio src="./audio/4-happy/f2_1_0_d111.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/4-happy/guo_1_0_d111.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/4-happy/gcn_1_0_d111.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/4-happy/ours_1_0_d111.wav" controls="" preload=""></audio></td>
+								    </tr>
+									<tr>
+										<td style="text-align: left"><img src="./audio/4-happy/2.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/4-happy/3.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/4-happy/4.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/4-happy/5.png" style="width: 100%;"/></td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
+							
+							<!-- 6 -->
+							<div class="module-title">6</div>
+							<div class="module-content">
+								<table class="table-sample">
+								  <thead>
+									<tr>
+										<th colspan="4" style="text-align: center"><strong>Dialogue History</strong></th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+										<td style="text-align: center" colspan="4">
+											<span>1.May i help you?&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<span>2.This dress is beautiful. may i try it on?&nbsp;&nbsp;(neutral;&nbsp;weak)</span>
+											</br>
+											<span>3.I'm afraid you can't.&nbsp;&nbsp;(sad;&nbsp;weak)</span>
+											</br>
+											<audio src="./audio/2-none/d188-all.wav" class="dialogue-wav" controls="" preload=""></audio>
+										</td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
+							<div class="module-content">
+								<table class="table-sample">
+								  <thead>
+								    <tr>
+										<th colspan="4" style="text-align: center"><strong>Current Utterance</strong></th>
+								    </tr>
+								  </thead>
+								  <tbody>
+									<tr>
+										<td style="text-align: center">No emotional context modeling</td>
+										<td style="text-align: center">GRU-based context modeling</td>
+										<td style="text-align: center">Homogeneous Graph-based emotion context modeling</td>
+										<td style="text-align: center"><strong>ECSS(Proposed)</strong></td>
+									</tr>
+								    <tr>
+										<td colspan="4" style="text-align: center"><span>4. What is the material of this dress?&nbsp;&nbsp;(neutral;&nbsp;weak)</span></td>
+								    </tr>
+									<tr>
+										<td style="text-align: left"><audio src="./audio/2-none/f2_3_1_d188.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/2-none/guo_3_1_d188.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/2-none/gcn_3_1_d188.wav" controls="" preload=""></audio></td>
+										<td style="text-align: left"><audio src="./audio/2-none/ours_3_1_d188.wav" controls="" preload=""></audio></td>
+								    </tr>
+									<tr>
+										<td style="text-align: left"><img src="./audio/2-none/2.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/2-none/3.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/2-none/4.png" style="width: 100%;"/></td>
+										<td style="text-align: left"><img src="./audio/2-none/5.png" style="width: 100%;"/></td>
+									</tr>
+								  </tbody>
+								</table>
+							</div>
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</body>
 </html>
