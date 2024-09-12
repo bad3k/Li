@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>MPETTS</title>
+    <title>FECTTS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link rel="stylesheet" href="css/normalize.css">
@@ -11,7 +11,7 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">MPETTS:CONTROLLABLE EMOTION TEXT-TO-SPEECH USING MULTIMODAL PROMPT</h1>
+      <h1 class="project-name">FECTTS：Fine-grained text feature enhanced emotion aware Conversational Text-to-Speech </h1>
       <a href="#" class="btn">Paper</a>
       <a href="#" class="btn">Project</a>
       <!-- <a href="#" class="btn">Download .zip</a>
@@ -22,7 +22,7 @@
 
     <section class="main-content">
       <h1 id="abstract">Abstract</h1>
-      <p>Text-to-Speech (TTS) system based on deep learning has witnessed significant progress. The naturalness and similarity of speech synthesized by the general TTS systems are close to human speech. Research on zero-shot TTS has become a more challenging speech generation task, but current models lack flexible control over emotional information. This paper proposes a controllable emotional TTS Zero-Shot  system based on multi-modal prompt, MPE-TTS, which allows prompts of both natural language description and reference speech to control the emotion of synthesized speech. Firstly, we introduce the pretrained Emotion2Vec as the emotion feature extractor and construct a multi-modal emotion dataset for training. Then,we propose a multi-modal emotion encoder to extract the emotion information from the prompts. Finally, we introduce a prosody predictor module based on an autoregressive transformer to predict the prosody and use a diffusion-based acoustic model to synthesize speech. The subjective and objective experiments show that the proposed model achieves flexible emotional control while ensuring the naturalness of synthesized speech, expanding the application scenarios of TTS systems. Besides, this method can be easily extended to other TTS systems.</p>
+      <p>In this conversational Text-to-speech(CTTS) task, the heterogeneous graph has excellent emotional rendering effects for conversation speech synthesis. However, in the construction process of heterogeneous graphs, the impact of fine-grained contextual historical information on emotional communication during dialogue has not been considered, which has always been a challenge. To address this issue, this article proposes the Fine grained text feature enhanced emotion aware Conversational Text to Speech (FECTTS). Specifically, we utilized fine-grained word level text features and other modalities to jointly construct heterogeneous graphs. In order to obtain more accurate and delicate emotional features, we employed a simple and effective emotion predictor. The experimental results show that the method proposed in this article has excellent conversational speech synthesis quality, and contains rich emotional expressions in the synthesized current discourse that match the emotional expressions in the context.</p>
       
 
       <h2 id="speech-based-emotion-control">Emotion Control Based On Speech Prompt</h2>
